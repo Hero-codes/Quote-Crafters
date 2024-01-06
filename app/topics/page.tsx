@@ -15,6 +15,7 @@ export default function Topics() {
             <div className='grid grid-cols-2 md:grid-cols-4 place-items-center mt-9 space-y-2'>
                 {topics.map(topic => (
                     <Link
+                        key={topic}
                         href={`/topics/${topic}`}
                         className='capitalize hover:underline transition hover:opacity-60'>
                         {topic}
