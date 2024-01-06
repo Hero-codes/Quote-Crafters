@@ -29,7 +29,7 @@ export default async function FavouriteQuotes() {
         <div className='ml-auto md:w-[50%] w-full'>
             <div className='flex flex-col space-y-5'>
 
-                <h3 className='text-xl font-semibold'>Your Favourite Quote's</h3>
+                <h3 className='text-xl font-semibold'>Your Favourite Quote&apos;s</h3>
 
                 {favQuotes.length === 0 && <div className='flex flex-col items-center'>
                     <div className='my-10 text-center text-gray-500'>
