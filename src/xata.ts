@@ -21,6 +21,7 @@ const tables = [
       { name: "user_id", type: "string" },
       { name: "quote", type: "string" },
       { name: "author", type: "string" },
+      { name: "category", type: "string" },
     ],
   },
 ] as const;

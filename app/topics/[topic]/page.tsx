@@ -26,11 +26,13 @@ export default async function SingleTopicQuote({ params: { topic } }: { params: 
 
         const quote = e.get("quote") as string;
         const author = e.get("author") as string;
+        const category = e.get("category") as string;
 
         const addQuote = await xata.db.FavouriteQuotes.create({
             user_id: user?.id,
             author,
-            quote
+            quote,
+            category
         });
 
         revalidatePath("/favourites");
@@ -51,6 +53,7 @@ export default async function SingleTopicQuote({ params: { topic } }: { params: 
 
                             <input type='hidden' name='author' value={quote.author} />
                             <input type='hidden' name='quote' value={quote.quote} />
+                            <input type='hidden' name='category' value={quote.category} />
 
                             <Button variant={"secondary"} className='w-fit mt-2 bg-pink-500'>
                                 Add To

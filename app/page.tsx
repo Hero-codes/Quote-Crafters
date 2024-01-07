@@ -1,10 +1,13 @@
-import Link from "next/link";
 import { Medal } from "lucide-react";
 import CalendarClient from "@/components/Calendar"
 import { Button } from "@/components/ui/button";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import Link from "next/link";
 
 const getData = async () => {
-  const res = await fetch('https://zenquotes.io/api/today')
+  const res = await fetch('https://zenquotes.io/api/today', {
+    cache: "no-store"
+  })
   const data = await res.json();
   return data;
 };
@@ -53,9 +56,17 @@ export default async function Home() {
             </span>
           </div>
 
-          <Link href="/sign-up">
-            <Button className="w-fit">Get Started</Button>
-          </Link>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <Button className="w-fit">Get Started</Button>
+            </SignInButton>
+          </SignedOut>
+
+          <SignedIn>
+            <Link href="/topics">
+              <Button>View Topics!</Button>
+            </Link>
+          </SignedIn>
         </div>
       </div>
 
