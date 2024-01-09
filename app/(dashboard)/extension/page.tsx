@@ -68,7 +68,7 @@ export default async function Extension() {
                             controls
                         />
 
-                        <a target='_blank' className='w-full' href="https://github.com/RitheshP23/1-8-2024/blob/main/Quotify-10.zip" download={"extension"}>
+                        <a target='_blank' className='w-full' href="https://github.com/RitheshP23/Quotify-Extension-V1" download={"extension"}>
                             <Button className='flex w-full gap-x-2 items-center'>
                                 Download Extension
                                 <Download />
