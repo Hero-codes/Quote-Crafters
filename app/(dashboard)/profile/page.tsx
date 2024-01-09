@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
-import { Library, Star, UserRound, ChevronRight } from "lucide-react"
+import { Library, Star, UserRound, ChevronRight, Blocks } from "lucide-react"
 import YourQuote from '@/components/YourQuote';
 
 export default async function Profile() {
@@ -47,6 +47,11 @@ export default async function Profile() {
                         <Link href="/favourites" className='flex rounded-md py-3 px-2 items-center gap-1 hover:bg-gray-200 transition'>
                             <Star />
                             <span>Favourites</span>
+                        </Link>
+
+                        <Link href="/extension" className='flex rounded-md py-3 px-2 items-center gap-1 hover:bg-gray-200 transition'>
+                            <Blocks />
+                            <span>Extension</span>
                         </Link>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { topics } from '@/constants'
 import Link from 'next/link'
 import React from 'react'
@@ -21,6 +22,15 @@ export default function Topics() {
                         {topic}
                     </Link>
                 ))}
+            </div>
+
+            <div className='mt-20 text-center'>
+                <h4 className='text-2xl mb-5 font-semibold'>Want Some Hindi Quotes?</h4>
+                <Link href="/topics/hindi">
+                    <Button>
+                        Click Here
+                    </Button>
+                </Link>
             </div>
         </div>
     )
