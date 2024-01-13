@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Quote Crafters',
-  description: 'An app built by students of Bhavans Civil Lines.',
+  description: 'Test App Made By Xata.',
   icons: [
     {
       url: "/logo.jpeg",
